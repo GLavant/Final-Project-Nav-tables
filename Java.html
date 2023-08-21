@@ -1,0 +1,63 @@
+<!--Giovanni LaVant-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Wars</title>
+</head>
+<nav>
+    <h2>
+       <ul class="nav__links">
+           <li><a href="/Users/giolavant/Desktop/index.html">Home</a></li>
+           <li><a href="/Users/giolavant/CSC 102./index p1.html">Index/Meme</a></li>
+           <li><a href="/Users/giolavant/Desktop/Java.html">Dice Game</a></li>
+           <li><a href="/Users/giolavant/CSC 102./Palindrom.html">Palindrome</a></li>
+           <li><a href="/Users/giolavant/strings.html">User Input</a></li>
+           <li><a href="/Users/giolavant/CSC 102./boards.html">Objectives</a></li>
+           <li><a href="/Users/giolavant/Desktop/tables.html">Table</a></li>
+       </ul>
+   </h2>
+</nav>
+<body>
+    <h1>Let's Play</h1>
+    <h2 id="roll"></h2>
+    <h2 id="roll2"></h2>
+    <!--Onclick to run function-->
+    <button onclick="rollTheDice()">Player 1: Roll the Dice</button>
+    <button onclick="rollTheDice2()">Player 2: Roll the Dice</button>
+
+    <script>
+        //math.random to generate a random number 1-6//
+    
+        function rollTheDice(){
+            const die = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("roll").innerHTML = die;
+        }
+    
+        function rollTheDice2(){
+            const die2 = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("roll2").innerHTML = die2;
+
+            const player1 = parseInt(document.getElementById("roll").innerhtml);
+            const player2 = parseInt(document.getElementById("roll2").innerHTML);
+            //if statements to alert who the winner is//
+            if(player1 === player2){
+                alert("Draw!");
+            }
+            if(player1 > player2){
+                alert("Player 1 Wins!");
+            }
+            else{
+                alert("Player 2 Wins!");
+            }
+        }
+    </script>
+    <footer>
+        Giovanni LaVant<br>
+        University of Advancing Technology<br>
+        Address: 2625 W Baseline Rd, Tempe, AZ 85283<br>
+        Tempe, AZ 85283<br>
+    </footer>
+</body>
+</html>

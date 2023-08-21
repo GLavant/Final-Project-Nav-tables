@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+<body>
+    
+</body>
+</html>
+<head>
+    <style>
+       label{
+            color: purple;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        p{
+            color:red;
+            font-size: larger
+        }
+    </style>
+
+    <nav>
+        <ul class="nav__links">
+            <li><a href="/Users/giolavant/Desktop/index.html">Home</a></li>
+            <li><a href="/Users/giolavant/CSC 102./index p1.html">Index/Meme</a></li>
+            <li><a href="/Users/giolavant/Desktop/Java.html">Dice Game</a></li>
+            <li><a href="/Users/giolavant/CSC 102./Palindrom.html">Palindrome</a></li>
+            <li><a href="/Users/giolavant/strings.html">User Input</a></li>
+            <li><a href="/Users/giolavant/CSC 102./boards.html">Objectives</a></li>
+            <li><a href="#">Table</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+    <p>Press Play to Listen to My Beat (Voni Beats - Sunday)</p>
+    <audio controls>
+        <source src="/Users/giolavant/Downloads/sunday Westcoast  - distro .m4a" type="audio/ogg">
+
+      </audio>                                                                                                                                                                                                                                                                                                                                                                                          
+        <!--<label> for input and <button> to run function-->
+        <div>
+     <label id="String_Check"> enter a word:</label>&nbsp;&nbsp;<input id="input_String" type="text" style="width:100px"/><br/>
+    <button id="run_code_btn" onclick="checkPalindrome()" style ="background-color: bisque;"> Run Palindrome Checker</button>
+        </div>
+    <script>
+        
+        //.replace() to remove any non-alphanumeric characters from the input string
+        function checkPalindrome(){
+            const String_Check = document.getElementById("input_String").value;
+            const cleanStr = String_Check.toLowerCase().replace(/[^a-z0-9]/g,'');       
+
+            const isPalindrome = cleanStr === cleanStr.split('').reverse().join('');
+            //alert("...") to alert the user if a palindrom or not
+            if(isPalindrome) {
+                alert(String_Check + " is a Palindrome");
+            }else{
+                alert(String_Check + " is not a Palindrome");
+            }
+        }
+    </script>
+    <footer>
+        Giovanni LaVant<br>
+        University of Advancing Technology<br>
+        Address: 2625 W Baseline Rd, Tempe, AZ 85283<br>
+        Tempe, AZ 85283<br>
+    </footer>
+</body>
+</html>

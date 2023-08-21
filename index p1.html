@@ -1,0 +1,62 @@
+<!--Giovanni LaVant-->
+<!DOCTYPE html>
+<html>
+<head>
+    <nav>
+        <h1>
+           <ul class="nav__links">
+               <li><a href="/Users/giolavant/Desktop/index.html">Home</a></li>
+               <li><a href="/Users/giolavant/CSC 102./index p1.html">Index/Meme</a></li>
+               <li><a href="/Users/giolavant/Desktop/Java.html">Dice Game</a></li>
+               <li><a href="/Users/giolavant/CSC 102./Palindrom.html">Palindrome</a></li>
+               <li><a href="/Users/giolavant/strings.html">User Input</a></li>
+               <li><a href="/Users/giolavant/CSC 102./boards.html">Objectives</a></li>
+               <li><a href="/Users/giolavant/Desktop/tables.html">Table</a></li>
+           </ul>
+       </h1>
+   </nav>
+    <!--styled with position: absolute; to enable movement-->
+  <style>
+    #myImage {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="startMoving()" style="background-color: aqua;">Start</button>
+  <button onclick="stopMoving()" style="background-color: red;">Stop</button>
+  <img id="myImage" src="/Users/giolavant/123.png" alt="meme">
+
+  <script>
+    var intervalId;
+
+    function startMoving() {
+      var image = document.getElementById('myImage');
+      var position = 0;
+
+      // Start moving the image every 10 milliseconds
+      intervalId = setInterval(frame, 10);
+        //frame function >> every 10 milliseconds which moves the image by changing its top and left styles.
+      function frame() {
+        if (position == 350) {
+          clearInterval(intervalId);
+        } else {
+          position++;
+          image.style.top = position + 'px';
+          image.style.left = position + 'px';
+        }
+      }
+    }
+    //When the "Stop" button is clicked, the interval is cleared using the saved intervalId.
+    function stopMoving() {
+      clearInterval(intervalId);
+    }
+  </script>
+  <footer>
+    Giovanni LaVant<br>
+    University of Advancing Technology<br>
+    Address: 2625 W Baseline Rd, Tempe, AZ 85283<br>
+    Tempe, AZ 85283<br>
+</footer>
+</body>
+</html>
